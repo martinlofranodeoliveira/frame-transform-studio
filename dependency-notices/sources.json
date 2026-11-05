@@ -1,0 +1,12 @@
+[
+  {
+    "package": "@react-three/fiber",
+    "version": "9.8.2",
+    "file": "react-three-fiber-LICENSE",
+    "source": "https://raw.githubusercontent.com/pmndrs/react-three-fiber/v9.8.2/LICENSE",
+    "source_ref": "v9.8.2",
+    "registry_source": "https://registry.npmjs.org/%40react-three%2Ffiber/9.8.2",
+    "sha256": "9c35b5de7b7493a707fffe4eb23bd2f7f449153c1911f7c6eefb4e591fd5349a",
+    "note": "Version-tagged upstream license. Registry gitHead raw URL returned404 and GitHub tree422; no commit verification claimed."
+  }
+]

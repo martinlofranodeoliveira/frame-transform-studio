@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-05T12:18:21.631309+00:00",
+  "title": "Design System: Frame Transform Studio",
+  "extensions": {
+    "colorMeta": {
+      "active": {
+        "role": "primary",
+        "displayName": "Azul ativo / Active blue",
+        "tonalRamp": [
+          "oklch(15% 0.19568 262.79)",
+          "oklch(26.43% 0.19568 262.79)",
+          "oklch(37.86% 0.19568 262.79)",
+          "oklch(49.29% 0.19568 262.79)",
+          "oklch(60.71% 0.19568 262.79)",
+          "oklch(72.14% 0.19568 262.79)",
+          "oklch(83.57% 0.19568 262.79)",
+          "oklch(95% 0.19568 262.79)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Bancada / Desk ground",
+        "tonalRamp": [
+          "oklch(15% 0.00347 219.53)",
+          "oklch(26.43% 0.00347 219.53)",
+          "oklch(37.86% 0.00347 219.53)",
+          "oklch(49.29% 0.00347 219.53)",
+          "oklch(60.71% 0.00347 219.53)",
+          "oklch(72.14% 0.00347 219.53)",
+          "oklch(83.57% 0.00347 219.53)",
+          "oklch(95% 0.00347 219.53)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Superfície branca / White surface",
+        "tonalRamp": [
+          "oklch(15% 0.00000 0.00)",
+          "oklch(26.43% 0.00000 0.00)",
+          "oklch(37.86% 0.00000 0.00)",
+          "oklch(49.29% 0.00000 0.00)",
+          "oklch(60.71% 0.00000 0.00)",
+          "oklch(72.14% 0.00000 0.00)",
+          "oklch(83.57% 0.00000 0.00)",
+          "oklch(95% 0.00000 0.00)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta principal / Main ink",
+        "tonalRamp": [
+          "oklch(15% 0.02541 248.74)",
+          "oklch(26.43% 0.02541 248.74)",
+          "oklch(37.86% 0.02541 248.74)",
+          "oklch(49.29% 0.02541 248.74)",
+          "oklch(60.71% 0.02541 248.74)",
+          "oklch(72.14% 0.02541 248.74)",
+          "oklch(83.57% 0.02541 248.74)",
+          "oklch(95% 0.02541 248.74)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Tinta de ajuda / Help ink",
+        "tonalRamp": [
+          "oklch(15% 0.02928 242.92)",
+          "oklch(26.43% 0.02928 242.92)",
+          "oklch(37.86% 0.02928 242.92)",
+          "oklch(49.29% 0.02928 242.92)",
+          "oklch(60.71% 0.02928 242.92)",
+          "oklch(72.14% 0.02928 242.92)",
+          "oklch(83.57% 0.02928 242.92)",
+          "oklch(95% 0.02928 242.92)"
+        ]
+      },
+      "support": {
+        "role": "neutral",
+        "displayName": "Tinta auxiliar / Supporting ink",
+        "tonalRamp": [
+          "oklch(15% 0.02974 241.22)",
+          "oklch(26.43% 0.02974 241.22)",
+          "oklch(37.86% 0.02974 241.22)",
+          "oklch(49.29% 0.02974 241.22)",
+          "oklch(60.71% 0.02974 241.22)",
+          "oklch(72.14% 0.02974 241.22)",
+          "oklch(83.57% 0.02974 241.22)",
+          "oklch(95% 0.02974 241.22)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Divisória / Divider",
+        "tonalRamp": [
+          "oklch(15% 0.01547 235.41)",
+          "oklch(26.43% 0.01547 235.41)",
+          "oklch(37.86% 0.01547 235.41)",
+          "oklch(49.29% 0.01547 235.41)",
+          "oklch(60.71% 0.01547 235.41)",
+          "oklch(72.14% 0.01547 235.41)",
+          "oklch(83.57% 0.01547 235.41)",
+          "oklch(95% 0.01547 235.41)"
+        ]
+      },
+      "button-border": {
+        "role": "neutral",
+        "displayName": "Borda de botão / Button border",
+        "tonalRamp": [
+          "oklch(15% 0.01831 240.05)",
+          "oklch(26.43% 0.01831 240.05)",
+          "oklch(37.86% 0.01831 240.05)",
+          "oklch(49.29% 0.01831 240.05)",
+          "oklch(60.71% 0.01831 240.05)",
+          "oklch(72.14% 0.01831 240.05)",
+          "oklch(83.57% 0.01831 240.05)",
+          "oklch(95% 0.01831 240.05)"
+        ]
+      },
+      "selected-surface": {
+        "role": "primary",
+        "displayName": "Linha selecionada / Selected row ground",
+        "tonalRamp": [
+          "oklch(15% 0.02327 264.46)",
+          "oklch(26.43% 0.02327 264.46)",
+          "oklch(37.86% 0.02327 264.46)",
+          "oklch(49.29% 0.02327 264.46)",
+          "oklch(60.71% 0.02327 264.46)",
+          "oklch(72.14% 0.02327 264.46)",
+          "oklch(83.57% 0.02327 264.46)",
+          "oklch(95% 0.02327 264.46)"
+        ]
+      },
+      "selected-ink": {
+        "role": "primary",
+        "displayName": "Tinta selecionada / Selected ink",
+        "tonalRamp": [
+          "oklch(15% 0.15004 262.87)",
+          "oklch(26.43% 0.15004 262.87)",
+          "oklch(37.86% 0.15004 262.87)",
+          "oklch(49.29% 0.15004 262.87)",
+          "oklch(60.71% 0.15004 262.87)",
+          "oklch(72.14% 0.15004 262.87)",
+          "oklch(83.57% 0.15004 262.87)",
+          "oklch(95% 0.15004 262.87)"
+        ]
+      },
+      "object": {
+        "role": "neutral",
+        "displayName": "Objeto neutro / Neutral object",
+        "tonalRamp": [
+          "oklch(15% 0.00857 225.09)",
+          "oklch(26.43% 0.00857 225.09)",
+          "oklch(37.86% 0.00857 225.09)",
+          "oklch(49.29% 0.00857 225.09)",
+          "oklch(60.71% 0.00857 225.09)",
+          "oklch(72.14% 0.00857 225.09)",
+          "oklch(83.57% 0.00857 225.09)",
+          "oklch(95% 0.00857 225.09)"
+        ]
+      },
+      "object-selected": {
+        "role": "primary",
+        "displayName": "Objeto selecionado / Selected object",
+        "tonalRamp": [
+          "oklch(15% 0.04211 266.32)",
+          "oklch(26.43% 0.04211 266.32)",
+          "oklch(37.86% 0.04211 266.32)",
+          "oklch(49.29% 0.04211 266.32)",
+          "oklch(60.71% 0.04211 266.32)",
+          "oklch(72.14% 0.04211 266.32)",
+          "oklch(83.57% 0.04211 266.32)",
+          "oklch(95% 0.04211 266.32)"
+        ]
+      },
+      "object-edge": {
+        "role": "neutral",
+        "displayName": "Aresta / Object edge",
+        "tonalRamp": [
+          "oklch(15% 0.02751 240.57)",
+          "oklch(26.43% 0.02751 240.57)",
+          "oklch(37.86% 0.02751 240.57)",
+          "oklch(49.29% 0.02751 240.57)",
+          "oklch(60.71% 0.02751 240.57)",
+          "oklch(72.14% 0.02751 240.57)",
+          "oklch(83.57% 0.02751 240.57)",
+          "oklch(95% 0.02751 240.57)"
+        ]
+      },
+      "parent-link": {
+        "role": "neutral",
+        "displayName": "Ligação de parentesco / Parent link",
+        "tonalRamp": [
+          "oklch(15% 0.02206 241.02)",
+          "oklch(26.43% 0.02206 241.02)",
+          "oklch(37.86% 0.02206 241.02)",
+          "oklch(49.29% 0.02206 241.02)",
+          "oklch(60.71% 0.02206 241.02)",
+          "oklch(72.14% 0.02206 241.02)",
+          "oklch(83.57% 0.02206 241.02)",
+          "oklch(95% 0.02206 241.02)"
+        ]
+      },
+      "axis-x": {
+        "role": "secondary",
+        "displayName": "Eixo X / X axis",
+        "tonalRamp": [
+          "oklch(15% 0.16352 24.15)",
+          "oklch(26.43% 0.16352 24.15)",
+          "oklch(37.86% 0.16352 24.15)",
+          "oklch(49.29% 0.16352 24.15)",
+          "oklch(60.71% 0.16352 24.15)",
+          "oklch(72.14% 0.16352 24.15)",
+          "oklch(83.57% 0.16352 24.15)",
+          "oklch(95% 0.16352 24.15)"
+        ]
+      },
+      "axis-y": {
+        "role": "secondary",
+        "displayName": "Eixo Y / Y axis",
+        "tonalRamp": [
+          "oklch(15% 0.10717 152.58)",
+          "oklch(26.43% 0.10717 152.58)",
+          "oklch(37.86% 0.10717 152.58)",
+          "oklch(49.29% 0.10717 152.58)",
+          "oklch(60.71% 0.10717 152.58)",
+          "oklch(72.14% 0.10717 152.58)",
+          "oklch(83.57% 0.10717 152.58)",
+          "oklch(95% 0.10717 152.58)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "title": {
+        "displayName": "Título / Title",
+        "purpose": "Título do produto. / Product title."
+      },
+      "heading": {
+        "displayName": "Seção / Heading",
+        "purpose": "Seções principais. / Main sections."
+      },
+      "subheading": {
+        "displayName": "Grupo / Subheading",
+        "purpose": "Grupos do inspetor. / Inspector groups."
+      },
+      "body": {
+        "displayName": "Corpo / Body",
+        "purpose": "Texto-base e controles. / Base text and controls."
+      },
+      "label": {
+        "displayName": "Rótulo / Label",
+        "purpose": "Rótulos e legendas. / Labels and legends."
+      },
+      "support": {
+        "displayName": "Apoio / Support",
+        "purpose": "IDs, ajuda e estado. / IDs, help and status."
+      },
+      "numeric": {
+        "displayName": "Número / Numeric",
+        "purpose": "13px padrão,12px intermediário e16px móvel. / 13px default,12px intermediate and16px mobile."
+      },
+      "matrix": {
+        "displayName": "Matriz / Matrix",
+        "purpose": "Matrizes alinhadas, com rolagem. / Aligned matrices with scrolling."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "pose-preview-duration",
+        "value": "5000ms",
+        "purpose": "Uma passagem iniciada explicitamente; movimento reduzido mantém apenas controles manuais. / One explicitly started pass; reduced motion keeps manual controls only."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "mobile-max",
+        "value": "760px"
+      },
+      {
+        "name": "compact-desktop-min",
+        "value": "761px"
+      },
+      {
+        "name": "compact-desktop-max",
+        "value": "1000px"
+      },
+      {
+        "name": "wide-desktop-min",
+        "value": "1500px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Captura neutra / Neutral capture",
+      "kind": "button",
+      "refersTo": "button-neutral",
+      "description": "Ação explícita de capturar uma pose local aceita. / Explicit capture of an accepted local pose.",
+      "html": "<button type=\"button\" class=\"ds-button-neutral\" lang=\"pt-BR\">Capturar pose atual A</button>",
+      "css": ".ds-button-neutral{font-family:'Public Sans Variable',sans-serif;font-size:14px;line-height:1.5;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 11px;border:1px solid #b9c5ce;border-radius:5px;background:#fff;color:#202b36;cursor:pointer;}.ds-button-neutral:hover{background:#e9eff7;border-color:#73869a}.ds-button-neutral:disabled{opacity:.5;cursor:not-allowed}.ds-button-neutral:focus-visible{outline:3px solid #235bd4;outline-offset:3px}"
+    },
+    {
+      "name": "Aplicar pose / Apply pose",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Ação primária do formulário. / Primary form action.",
+      "html": "<button type=\"button\" class=\"ds-button-primary\" lang=\"pt-BR\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"17\" height=\"17\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Aplicar pose e rótulo</button>",
+      "css": ".ds-button-primary{font-family:'Public Sans Variable',sans-serif;font-size:14px;line-height:1.5;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 11px;border:1px solid #b9c5ce;border-radius:5px;background:#fff;color:#202b36;cursor:pointer;width:100%}.ds-button-primary:hover{background:#e9eff7;border-color:#73869a}.ds-button-primary:disabled{opacity:.5;cursor:not-allowed}.ds-button-primary:focus-visible{outline:3px solid #235bd4;outline-offset:3px}.ds-button-primary{background:#235bd4;border-color:#235bd4;color:#fff}.ds-button-primary svg{flex-shrink:0}"
+    },
+    {
+      "name": "Modo câmera ativo / Active camera mode",
+      "kind": "button",
+      "refersTo": "button-pressed",
+      "description": "Estado pressionado com saída explícita. Amostra visual, sem controles de câmera. / Pressed state with explicit exit. Visual sample without camera controls.",
+      "html": "<button type=\"button\" class=\"ds-button-pressed\" aria-pressed=\"true\" lang=\"pt-BR\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"17\" height=\"17\" aria-hidden=\"true\"><path d=\"M20 6 9 17l-5-5\"/></svg>Concluir câmera (Esc)</button>",
+      "css": ".ds-button-pressed{font-family:'Public Sans Variable',sans-serif;font-size:14px;line-height:1.5;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 11px;border:1px solid #b9c5ce;border-radius:5px;background:#fff;color:#202b36;cursor:pointer;}.ds-button-pressed:hover{background:#e9eff7;border-color:#73869a}.ds-button-pressed:disabled{opacity:.5;cursor:not-allowed}.ds-button-pressed:focus-visible{outline:3px solid #235bd4;outline-offset:3px}.ds-button-pressed[aria-pressed=true]{background:#235bd4;border-color:#235bd4;color:#fff}.ds-button-pressed svg{flex-shrink:0}"
+    },
+    {
+      "name": "Campo numérico / Numerical field",
+      "kind": "input",
+      "refersTo": "numeric-input",
+      "description": "Um componente do grupo de translação; valor de exemplo literal. / One component of the translation group; literal sample value.",
+      "html": "<label class=\"ds-numeric-label\">X<input class=\"ds-numeric-input\" aria-label=\"Translação local X\" inputmode=\"decimal\" maxlength=\"64\" value=\"1\" /></label>",
+      "css": ".ds-numeric-label{font-family:'Public Sans Variable',sans-serif;font-size:14px;line-height:1.5;display:block;font-size:12px;font-weight:400;font-variant-numeric:tabular-nums;color:#202b36}.ds-numeric-input{font-family:'Public Sans Variable',sans-serif;font-size:14px;line-height:1.5;display:block;width:100%;min-height:44px;border:1px solid #9aaab6;border-radius:4px;background:#fff;color:#202b36;padding:7px 5px;font-size:13px;margin-top:5px;font-variant-numeric:tabular-nums}.ds-numeric-input:focus-visible{outline:3px solid #235bd4;outline-offset:3px}@media(max-width:1000px) and (min-width:761px){.ds-numeric-input{font-size:12px}}@media(max-width:760px){.ds-numeric-input{font-size:16px;padding-inline:8px}}"
+    },
+    {
+      "name": "Matriz inspecionável / Inspectable matrix",
+      "kind": "custom",
+      "refersTo": "matrix-readout",
+      "description": "Matriz global de Base no seed sintético; resumo nativo e alinhamento por linhas. / Global matrix of Base in the synthetic seed; native summary and row alignment.",
+      "html": "<details class=\"ds-matrix-details\" open lang=\"pt-BR\"><summary class=\"ds-matrix-summary\">Matriz global</summary><pre class=\"ds-matrix\" aria-label=\"Matriz global\">    0.000000    -1.000000     0.000000     2.000000\n    1.000000     0.000000     0.000000     0.000000\n    0.000000     0.000000     1.000000     0.000000\n    0.000000     0.000000     0.000000     1.000000</pre></details>",
+      "css": ".ds-matrix-details{font-family:'Public Sans Variable',sans-serif;font-size:14px;line-height:1.5;margin:10px 0;color:#202b36}.ds-matrix-summary{cursor:pointer;padding:8px 0;min-height:40px;font-weight:550}.ds-matrix-summary:focus-visible{outline:3px solid #235bd4;outline-offset:3px}.ds-matrix{font-family:ui-monospace,monospace;font-size:12px;line-height:1.9;background:#f3f6f7;padding:10px 4px;overflow:auto;margin:4px 0;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Prévia manual / Manual preview",
+      "kind": "custom",
+      "description": "Slider e passos depois de A/B capturadas; amostra de estilo sem reprodução. / Slider and steps after A/B capture; style sample without playback.",
+      "html": "<div class=\"ds-comparison\" lang=\"pt-BR\"><label class=\"ds-progress-label\" for=\"ds-progress\">Interpolação <output>0%</output><input class=\"ds-progress-range\" id=\"ds-progress\" type=\"range\" min=\"0\" max=\"1\" step=\"0.01\" value=\"0\" /></label><div class=\"ds-step-actions\"><button type=\"button\" class=\"ds-step-button\">Voltar 10%</button><button type=\"button\" class=\"ds-step-button\">Avançar 10%</button></div></div>",
+      "css": ".ds-comparison{font-family:'Public Sans Variable',sans-serif;font-size:14px;line-height:1.5;color:#202b36}.ds-progress-label{display:block;font-weight:550;margin-top:14px}.ds-progress-label output{float:right;font-variant-numeric:tabular-nums}.ds-progress-range{font:inherit;display:block;width:100%;min-height:44px;border:1px solid #9aaab6;border-radius:4px;background:#fff;padding:0;margin-top:5px;accent-color:#235bd4}.ds-progress-range:focus-visible{outline:3px solid #235bd4;outline-offset:3px}.ds-step-actions{display:flex;gap:6px;margin:10px 0}.ds-step-button{font-family:'Public Sans Variable',sans-serif;font-size:14px;line-height:1.5;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 11px;border:1px solid #b9c5ce;border-radius:5px;background:#fff;color:#202b36;cursor:pointer;flex:1}.ds-step-button:hover{background:#e9eff7;border-color:#73869a}.ds-step-button:disabled{opacity:.5;cursor:not-allowed}.ds-step-button:focus-visible{outline:3px solid #235bd4;outline-offset:3px}"
+    },
+    {
+      "name": "Navegação móvel / Mobile navigation",
+      "kind": "nav",
+      "description": "Botões de seção no estado móvel; amostra visual sem troca de painel. / Section buttons in mobile state; visual sample without panel switching.",
+      "html": "<nav class=\"ds-mobile-nav\" aria-label=\"Objetos\" lang=\"pt-BR\"><button type=\"button\" class=\"ds-mobile-button\" aria-pressed=\"true\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"17\" height=\"17\" aria-hidden=\"true\"><path d=\"M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z\"/><path d=\"M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12\"/><path d=\"M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17\"/></svg>Objetos</button><button type=\"button\" class=\"ds-mobile-button\" aria-pressed=\"false\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"17\" height=\"17\" aria-hidden=\"true\"><path d=\"M10 5H3\"/><path d=\"M12 19H3\"/><path d=\"M14 3v4\"/><path d=\"M16 17v4\"/><path d=\"M21 12h-9\"/><path d=\"M21 19h-5\"/><path d=\"M21 5h-7\"/><path d=\"M8 10v4\"/><path d=\"M8 12H3\"/></svg>Propriedades</button><button type=\"button\" class=\"ds-mobile-button\" aria-pressed=\"false\"><svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" width=\"17\" height=\"17\" aria-hidden=\"true\"><path d=\"M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z\"/><path d=\"M15 5.764v15\"/><path d=\"M9 3.236v15\"/></svg>Planta</button></nav>",
+      "css": ".ds-mobile-nav{font-family:'Public Sans Variable',sans-serif;font-size:14px;line-height:1.5;display:flex;padding:8px 12px;gap:6px;border-bottom:1px solid #c5d0d7;background:#fff}.ds-mobile-button{font-family:'Public Sans Variable',sans-serif;font-size:14px;line-height:1.5;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:44px;padding:8px 11px;border:1px solid #b9c5ce;border-radius:5px;background:#fff;color:#202b36;cursor:pointer;flex:1}.ds-mobile-button:hover{background:#e9eff7;border-color:#73869a}.ds-mobile-button:disabled{opacity:.5;cursor:not-allowed}.ds-mobile-button:focus-visible{outline:3px solid #235bd4;outline-offset:3px}.ds-mobile-button[aria-pressed=true]{background:#235bd4;border-color:#235bd4;color:#fff}.ds-mobile-button svg{flex-shrink:0}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Maquete técnica / Technical maquette",
+    "overview": "**PT-BR.** A bancada clara coloca quadros, relações de parentesco e poses no centro do trabalho. Hierarquia e inspetor enquadram uma cena contínua; medidas e matrizes explicam a geometria. “Maquete técnica” é a direção provisória escolhida pelo responsável sob delegação, sem confirmação humana dessa escolha estética. React, trabalho por código e aplicações 3D profissionais são escolhas confirmadas.\n\n**EN.** A daylight desk puts frames, parent relations and poses at the centre of the task. Hierarchy and inspector frame a continuous scene; measurements and matrices explain geometry. “Technical maquette” is the provisional direction chosen by the owner under delegated authority, without human confirmation of that visual choice. React, a code-first workflow and professional 3D applications are confirmed choices.\n\n**Evidence / Evidência.** This record derives from actual CSS, React components, core axis colours and the built artifact. It preserves the technical document's limits: no desktop/mobile captures, real WebGL pixels, gestures, picking, rendered responsiveness, font rendering, focus traversal, screen-reader output or rendered contrast were observed. Visual finish remains pending with `recapture`; this document does not close it. Static detection, DOM/scene-object tests and an independent code review do not constitute visual or accessibility approval. / Registro da fonte, com revisão visual pendente.",
+    "keyCharacteristics": [
+      "Cena contínua entre hierarquia e inspetor / Continuous scene between hierarchy and inspector.",
+      "Neutros claros, seleção azul e eixos identificados / Light neutrals, blue selection and identified axes.",
+      "Poses locais e globais inspecionáveis / Inspectable local and world poses.",
+      "Prévia explícita, aplicação deliberada e alternativa 2D / Explicit preview, deliberate commit and 2D alternative."
+    ],
+    "rules": [
+      {
+        "name": "The Axis Identity Rule",
+        "body": "X, Y e Z mantêm as mesmas cores na cena e nas projeções; a legenda textual informa a convenção. / X, Y and Z retain the same colours in scene and projections; the text legend states the convention.",
+        "section": "colors"
+      },
+      {
+        "name": "The Inspectable Number Rule",
+        "body": "Campos numéricos, poses, matrizes e progresso usam algarismos tabulares; matrizes preservam alinhamento e rolagem horizontal. / Numeric fields, poses, matrices and progress use tabular numerals; matrices preserve alignment and horizontal scrolling.",
+        "section": "typography"
+      },
+      {
+        "name": "The Spatial Depth Rule",
+        "body": "Preserve controles planos e deixe geometria, arestas e relações espaciais explicar a profundidade. / Preserve flat controls and let geometry, edges and spatial relations explain depth.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Preview Boundary Rule",
+        "body": "A prévia altera cena, projeção e leitura de matrizes; histórico e exportações continuam usando a pose aceita até Aplicar prévia. O contexto informa esse estado em texto. / Preview changes scene, projection and matrix readouts; history and exports continue using the accepted pose until Apply preview. Context states that boundary in text.",
+        "section": "components"
+      }
+    ],
+    "dos": [
+      "**Do** manter cores e legenda consistentes entre eixos e representações / keep colours and legend consistent across axes and representations.",
+      "**Do** distinguir pose aceita, rascunho e prévia em texto / distinguish accepted pose, draft and preview in text.",
+      "**Do** preservar seleção DOM, matrizes, controles manuais e exportação sem GPU / preserve DOM selection, matrices, manual controls and export without a GPU.",
+      "**Do** verificar PT-BR/EN, foco, zoom, fontes, toque, scroll e contexto perdido em browser real / verify PT-BR/EN, focus, zoom, fonts, touch, scroll and lost context in a real browser."
+    ],
+    "donts": [
+      "**Don't** copiar a faixa interna de (3px) como nova convenção de seleção / copy the (3px) inset stripe as a new selection convention.",
+      "**Don't** apresentar prévia ou projeção como documento aceito ou desenho cotado / present preview or projection as accepted document or dimensioned drawing.",
+      "**Don't** tratar clique na projeção, detector, testes ou este documento como aprovação completa de teclado, visual ou acessibilidade / treat projection clicks, detector, tests or this document as complete keyboard, visual or accessibility approval."
+    ]
+  }
+}
