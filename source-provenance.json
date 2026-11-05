@@ -1,0 +1,48 @@
+{
+  "project": "frame-transform-studio",
+  "source_commit": "07de4d24d2054339fd65c2e007219d0215ca6395",
+  "source_inventory_sha256": "07307c4d67005ff2146b9fd0a804695796aea8a8af6d712fa1b686b3ee0eecaa",
+  "assets": [
+    {
+      "path": "assets/index-B_QfkglJ.css",
+      "bytes": 8425,
+      "sha256": "f0d7383185784d40da6aabc073626f14b651bf284c3c8c67e501b23d9a3e1489"
+    },
+    {
+      "path": "assets/index-BeHZExX4.js",
+      "bytes": 1194010,
+      "sha256": "2def1f8052fd0e53f94aa010737d00f9f437ec24b71a63a4f613a8c31ec19008"
+    },
+    {
+      "path": "assets/public-sans-latin-ext-wght-normal-MQgHevqp.woff2",
+      "bytes": 18472,
+      "sha256": "3a00a32f0242b723dcea79935747d6d27dd93675d03ef23f470dfe274e79586a"
+    },
+    {
+      "path": "assets/public-sans-latin-wght-normal-DdeTHZLK.woff2",
+      "bytes": 26832,
+      "sha256": "5ed4d31c988e73b258894244f209069ebe77dc7e564861954b21198b6de90d68"
+    },
+    {
+      "path": "assets/public-sans-vietnamese-wght-normal-CtlIRbEm.woff2",
+      "bytes": 7716,
+      "sha256": "94593e69fad0885b2b0b74cd18d036c7e9cd6051b2256ab281a20f5bc9ccb46f"
+    },
+    {
+      "path": "index.html",
+      "bytes": 1244,
+      "sha256": "9b557cab0b6388387054bea1f7f22bcf7a4a284846c688175c4a33cb40e096d0"
+    },
+    {
+      "path": "third-party-notices.txt",
+      "bytes": 24387,
+      "sha256": "29065fa32b4c2764af50d18085783e7700a3eea92afc240f0f1ccec847249e48"
+    },
+    {
+      "path": "third-party-sources.json",
+      "bytes": 3585,
+      "sha256": "d3686bbb1b274330a5f17c58cf60078e96fec9a772c6a8c5f9ce7761d7bfcb27"
+    }
+  ],
+  "verification": "Offline technical gates passed; browser/WebGL visual QA remains pending."
+}
