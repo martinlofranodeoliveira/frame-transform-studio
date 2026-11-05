@@ -1,17 +1,17 @@
 {
   "project": "frame-transform-studio",
-  "source_commit": "07de4d24d2054339fd65c2e007219d0215ca6395",
-  "source_inventory_sha256": "07307c4d67005ff2146b9fd0a804695796aea8a8af6d712fa1b686b3ee0eecaa",
+  "source_commit": "5ac300429a83a2552a4d87465679d809bae4f85d",
+  "source_inventory_sha256": "f9f28a68567c67ad9ac16abc9ea4e9e0c8ceaee8c383cbde88f36d3aabb4f45c",
   "assets": [
+    {
+      "path": "assets/index-AZlBb0r-.js",
+      "bytes": 1194910,
+      "sha256": "0ff9f5cfe5c8057e616b6e6e6d411bc5863653f1ae898ed03d55b2b3bb0a2583"
+    },
     {
       "path": "assets/index-B_QfkglJ.css",
       "bytes": 8425,
       "sha256": "f0d7383185784d40da6aabc073626f14b651bf284c3c8c67e501b23d9a3e1489"
-    },
-    {
-      "path": "assets/index-BeHZExX4.js",
-      "bytes": 1194010,
-      "sha256": "2def1f8052fd0e53f94aa010737d00f9f437ec24b71a63a4f613a8c31ec19008"
     },
     {
       "path": "assets/public-sans-latin-ext-wght-normal-MQgHevqp.woff2",
@@ -31,7 +31,7 @@
     {
       "path": "index.html",
       "bytes": 1244,
-      "sha256": "9b557cab0b6388387054bea1f7f22bcf7a4a284846c688175c4a33cb40e096d0"
+      "sha256": "d918feaa07ed49024cba0c937fda7b3dc2fec484b6c24cc5e33f4b46f9f9e6d7"
     },
     {
       "path": "third-party-notices.txt",
