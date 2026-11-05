@@ -8,6 +8,7 @@ import type { Key, Locale } from './i18n';
 import { Scene } from './Scene';
 import { CameraModeButton } from './CameraModeButton';
 import { Projection } from './Projection';
+const parseNumber = (v: string): number => /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/.test(v.trim()) ? Number(v) : NaN;
 const format = (n: number) => Math.abs(n) < 0.0000005 ? '0.000000' : n.toFixed(6);
 function matrixText(m: readonly number[]) { return [0,1,2,3].map(r => [0,1,2,3].map(c => format(m[c*4+r]).padStart(12)).join(' ')).join('\n'); }
 function supported() { return typeof WebGLRenderingContext !== 'undefined'; }
@@ -23,8 +24,8 @@ export function App({ initialStore, initialFallback = false }: { initialStore?: 
   const [fitKey, setFitKey] = useState(0);
   const [error, setError] = useState<Code | null>(null);
   const [status, setStatus] = useState<Key>('ready');
-  const [label, setLabel] = useState('');
-  const [numbers, setNumbers] = useState<string[]>([]);
+  const [label, setLabel] = useState(() => store.doc.frames.find(f => f.id === store.selected)?.label ?? '');
+  const [numbers, setNumbers] = useState<string[]>(() => { const f = store.doc.frames.find(v => v.id === store.selected); return f ? [...f.pose.t, ...f.pose.q].map(String) : []; });
   const [parent, setParent] = useState('');
   const [a, setA] = useState<Pose | null>(null), [b, setB] = useState<Pose | null>(null);
   const [amount, setAmount] = useState(0), [preview, setPreview] = useState(false), [playing, setPlaying] = useState(false);
@@ -53,6 +54,9 @@ export function App({ initialStore, initialFallback = false }: { initialStore?: 
     setNumbers(frame ? [...frame.pose.t, ...frame.pose.q].map(String) : []);
     setParent(frame?.parent ?? '');
   }, [frame, revision]);
+  const acceptedNumbers = frame ? [...frame.pose.t, ...frame.pose.q] : [];
+  const pending = !!frame && (label !== frame.label || numbers.length !== 7 || numbers.some((value, i) => !Number.isFinite(parseNumber(value)) || parseNumber(value) !== acceptedNumbers[i]));
+  const editDraft = () => { stop(); setPreview(false); setError(null); };
   const clearComparison = () => { setA(null); setB(null); setAmount(0); setPreview(false); };
   const select = useCallback((id: string) => {
     stop(); store.select(id); setA(null); setB(null); setPreview(false); setAmount(0); setError(null); setRevision(v => v+1);
@@ -86,7 +90,7 @@ export function App({ initialStore, initialFallback = false }: { initialStore?: 
   }, true);
   const apply = () => action(() => {
     if (!frame) throw new Fault('missing');
-    const values = numbers.map(v => /^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/.test(v.trim()) ? Number(v) : NaN);
+    const values = numbers.map(parseNumber);
     store.edit(frame.id, label, { t: [values[0], values[1], values[2]], q: [values[3], values[4], values[5], values[6]] });
   });
   const readFile = async (file: File | undefined) => {
@@ -146,9 +150,10 @@ export function App({ initialStore, initialFallback = false }: { initialStore?: 
         {frame && <>
           <form onSubmit={e => { e.preventDefault(); apply(); }}>
             <h3>{t('local')}</h3>
-            <label>{t('label')}<input value={label} onChange={e => setLabel(e.target.value)} maxLength={128} /></label>
-            <fieldset><legend>{t('translation')}</legend><div className="numeric three">{['X','Y','Z'].map((axis, i) => <label key={axis}>{axis}<input aria-label={`${t('translation')} ${axis}`} inputMode="decimal" maxLength={64} value={numbers[i] ?? ''} onChange={e => setNumbers(v => v.map((n,j) => j === i ? e.target.value : n))} /></label>)}</div></fieldset>
-            <fieldset><legend>{t('quaternion')} xyzw</legend><div className="numeric four">{['x','y','z','w'].map((axis, i) => <label key={axis}>{axis}<input aria-label={`${t('quaternion')} ${axis}`} inputMode="decimal" maxLength={64} value={numbers[i+3] ?? ''} onChange={e => setNumbers(v => v.map((n,j) => j === i+3 ? e.target.value : n))} /></label>)}</div></fieldset>
+            <p role="status" aria-label={t('draftState')}>{t(pending ? 'pending' : 'draftApplied')}</p>
+            <label>{t('label')}<input value={label} onChange={e => { editDraft(); setLabel(e.target.value); }} maxLength={128} /></label>
+            <fieldset><legend>{t('translation')}</legend><div className="numeric three">{['X','Y','Z'].map((axis, i) => <label key={axis}>{axis}<input aria-label={`${t('translation')} ${axis}`} inputMode="decimal" maxLength={64} value={numbers[i] ?? ''} onChange={e => { editDraft(); const value = e.target.value; setNumbers(v => v.map((n,j) => j === i ? value : n)); }} /></label>)}</div></fieldset>
+            <fieldset><legend>{t('quaternion')} xyzw</legend><div className="numeric four">{['x','y','z','w'].map((axis, i) => <label key={axis}>{axis}<input aria-label={`${t('quaternion')} ${axis}`} inputMode="decimal" maxLength={64} value={numbers[i+3] ?? ''} onChange={e => { editDraft(); const value = e.target.value; setNumbers(v => v.map((n,j) => j === i+3 ? value : n)); }} /></label>)}</div></fieldset>
             <button type="submit" className="primary"><Check aria-hidden="true" />{t('apply')}</button>
           </form>
           <section className="inspector-section"><label>{t('parent')}<select value={parent} onChange={e => setParent(e.target.value)}><option value="">{t('root')}</option>{store.doc.frames.filter(f => f.id !== frame.id).map(f => <option key={f.id} value={f.id}>{f.label} ({f.id})</option>)}</select></label><button onClick={() => action(() => store.reparent(frame.id, parent || null), true)}>{t('reparent')}</button></section>
@@ -157,12 +162,12 @@ export function App({ initialStore, initialFallback = false }: { initialStore?: 
             <details><summary>{t('localMatrix')}</summary><pre aria-label={t('localMatrix')}>{matrixText(matrix(local!))}</pre></details><p>{t('matrixHelp')}</p>
           </section>
           <section className="inspector-section comparison"><h3>{t('compare')}</h3><p>{t('compareHelp')}</p>
-            <div className="capture"><button onClick={() => { stop(); setA(frame.pose); }}>{t('captureA')}</button><span>A: {t(a ? 'captured' : 'notCaptured')}</span><button onClick={() => { stop(); setB(frame.pose); }}>{t('captureB')}</button><span>B: {t(b ? 'captured' : 'notCaptured')}</span></div>
-            <label htmlFor="interpolation-progress">{t('progress')} <output>{Math.round(amount*100)}%</output><input id="interpolation-progress" type="range" min="0" max="1" step="0.01" value={amount} disabled={!a || !b} onChange={e => setStep(Number(e.target.value))} /></label>
-            <div className="step-actions"><button disabled={!a || !b} onClick={() => setStep(amount-0.1)}>{t('back')}</button><button disabled={!a || !b} onClick={() => setStep(amount+0.1)}>{t('forward')}</button></div>
-            <button disabled={!a || !b || reduced} onClick={playing ? stop : play}>{playing ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />}{t(playing ? 'pause' : 'play')}</button>
+            <div className="capture"><button disabled={pending} onClick={() => { stop(); setA(frame.pose); }}>{t('captureA')}</button><span>A: {t(a ? 'captured' : 'notCaptured')}</span><button disabled={pending} onClick={() => { stop(); setB(frame.pose); }}>{t('captureB')}</button><span>B: {t(b ? 'captured' : 'notCaptured')}</span></div>
+            <label htmlFor="interpolation-progress">{t('progress')} <output>{Math.round(amount*100)}%</output><input id="interpolation-progress" type="range" min="0" max="1" step="0.01" value={amount} disabled={pending || !a || !b} onChange={e => setStep(Number(e.target.value))} /></label>
+            <div className="step-actions"><button disabled={pending || !a || !b} onClick={() => setStep(amount-0.1)}>{t('back')}</button><button disabled={pending || !a || !b} onClick={() => setStep(amount+0.1)}>{t('forward')}</button></div>
+            <button disabled={pending || !a || !b || reduced} onClick={playing ? stop : play}>{playing ? <Pause aria-hidden="true" /> : <Play aria-hidden="true" />}{t(playing ? 'pause' : 'play')}</button>
             {reduced && <p>{t('reduced')}</p>}
-            <button disabled={!previewPose} onClick={() => previewPose && action(() => store.edit(frame.id, frame.label, previewPose))}>{t('commit')}</button>
+            <button disabled={pending || !previewPose} onClick={() => previewPose && action(() => store.edit(frame.id, frame.label, previewPose))}>{t('commit')}</button>
           </section>
         </>}
       </aside>
